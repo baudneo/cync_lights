@@ -228,6 +228,7 @@ class CyncHub:
                             if command_received is not None:
                                 command_received(seq)
                 except Exception as e:
+
                     _LOGGER.error(str(type(e).__name__) + ": " + str(e), exc_info=True)
                 data = data[packet_length+5:]
         raise ShuttingDown
